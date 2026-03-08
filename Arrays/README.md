@@ -45,4 +45,38 @@ But for one query, this is not better.
 
 **Time Complexity:** O(N log N): O(log N) - for binary search + O(N log N) for sorting
 
+<summary>2_find_max.java — Find maximum element in array.</summary>
+
+**Approach 1:** Linear Search
+
+**Idea:** Traverse the array and track the largest element seen so far.
+Steps:
+
+```
+max = first element
+
+for each element
+    if element > max
+        max = element
+```
+
+**Time Complexity:** O(N)
+
+**Space Complexity:** O(1) for variable
+
+**Approach 2:** Sorting
+**Idea:** Sort the array. The last element will be the maximum.
+Steps:
+
+```
+sort array
+print last element
+```
+
+**Time Complexity:** O(N log N) - slower than needed
+
+**Approach 3:** Using Java Built-in Streams
+
+**Idea:** Arrays.stream(arr).max()
+
 </details>
