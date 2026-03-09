@@ -79,4 +79,27 @@ print last element
 
 **Idea:** Arrays.stream(arr).max()
 
+<summary>3_take_discount_or_not.java</summary>
+
+**Problem**: There are N items in a shop. You know that the price of the i-th item is $A_i$​. Chef wants to buy all the N items. There is also a discount coupon that costs X and reduces the cost of every item by
+Y. If the price of an item was initially ≤ Y, it becomes free, i.e, costs 0.
+
+Determine whether Chef should buy the discount coupon or not. Chef will buy the discount coupon if and only if the total price he pays after buying the discount coupon is strictly less than the price he pays without buying the discount coupon.
+
+**Approach 1**: Two Passes
+
+**Idea**: Compute total price without coupon. Compute total price with coupon by applying the discount to every item. Add coupon cost X. Compare the two totals.
+
+**Time complexity**: O(N)
+
+**Space**: O(N) - if we store array
+
+**Approach 2**: One Pass (improved, optimal)
+
+**Idea**: CCompute both totals simultaneously while reading the items.
+
+**Time complexity**: O(N)
+
+**Space**: O(1)
+
 </details>

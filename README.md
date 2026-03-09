@@ -7,7 +7,7 @@ Each topic folder contains Java solution files alongside a README with a dropdow
 
 | Topic                            | Problems Solved |
 | -------------------------------- | --------------- |
-| Arrays                           | 2               |
+| Arrays                           | 3               |
 | Strings                          | 0               |
 | Linked Lists                     | 0               |
 | Stacks and Queues                | 0               |
