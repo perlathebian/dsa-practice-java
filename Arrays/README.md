@@ -87,7 +87,7 @@ print last element
 
 <details>
 
-<summary>ex3_take_discount_or_not.java</summary>
+<summary>ex3_take_discount_or_not.java - Buying Coupon or Not</summary>
 
 **Problem**: There are N items in a shop. You know that the price of the i-th item is $A_i$​. Chef wants to buy all the N items. There is also a discount coupon that costs X and reduces the cost of every item by
 Y. If the price of an item was initially ≤ Y, it becomes free, i.e, costs 0.
@@ -114,7 +114,7 @@ Determine whether Chef should buy the discount coupon or not. Chef will buy the 
 
 <details>
 
-<summary>ex4_cost_of_groceries.java</summary>
+<summary>ex4_cost_of_groceries.java - Total Cost</summary>
 
 **Problem**: Chef visited a grocery store for fresh supplies. There are N items in the store where the ith item has a freshness value $A_i$ and cost $B_i$. Chef has decided to purchase all the items having a freshness value greater than equal to X. Find the total cost of the groceries Chef buys.
 
@@ -152,5 +152,51 @@ Time complexity remains the same.
 **Time complexity**: O(N)
 
 **Space**: O(N) - one array (slightly reduced)
+
+</details>
+
+<details>
+<summary>ex5_is_array_sorted.java - Return Whether Input Array is Sorted</summary>
+
+**Problem**: Given an array nums which is rotated. You have to find out if the given array is sorted and rotated.
+An array is considered sorted and rotated if:
+
+- There exists a non-decreasing sorted array A.
+- After rotating A by some k positions (possibly k=0), we obtain the given array nums.
+- Rotation means some suffix of A is moved to the front, keeping the relative order of elements.
+
+A valid sorted-rotated array can have AT MOST ONE drop.
+
+**Approach 1**: Brute Force (Simulate All Rotations)
+
+**Idea**: Rotate the array k times.
+After each rotation, check if the array becomes sorted.
+If any rotation is sorted, return true.
+
+Pseudo logic:
+
+```
+for k from 0 to N-1
+    rotate array by k
+    check if sorted
+```
+
+**Time complexity**: $O(N^2)$ - N rotations × N checks
+
+**Space**: O(N)
+
+**Approach 2**: Count Order Violations (Optimal)
+
+**Idea**: Count how many times the order decreases.
+If
+
+```
+drops ≤ 1 → true
+Else → false
+```
+
+**Time complexity**: O(N)
+
+**Space**: O(1)
 
 </details>
