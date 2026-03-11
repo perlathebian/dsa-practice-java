@@ -5,7 +5,7 @@ Core idea: index-based access, sliding window, two pointers, prefix sums.
 ## Problems
 
 <details>
-<summary>1_search_element.java — Search an element in an array</summary>
+<summary>ex1_search_element.java — Search an element in an array</summary>
 
 **Approach 1:** Brute Force (Linear Search)
 
@@ -45,7 +45,11 @@ But for one query, this is not better.
 
 **Time Complexity:** O(N log N): O(log N) - for binary search + O(N log N) for sorting
 
-<summary>2_find_max.java — Find maximum element in array.</summary>
+</details>
+
+<details>
+
+<summary>ex2_find_max.java — Find maximum element in array.</summary>
 
 **Approach 1:** Linear Search
 
@@ -79,7 +83,11 @@ print last element
 
 **Idea:** Arrays.stream(arr).max()
 
-<summary>3_take_discount_or_not.java</summary>
+</details>
+
+<details>
+
+<summary>ex3_take_discount_or_not.java</summary>
 
 **Problem**: There are N items in a shop. You know that the price of the i-th item is $A_i$​. Chef wants to buy all the N items. There is also a discount coupon that costs X and reduces the cost of every item by
 Y. If the price of an item was initially ≤ Y, it becomes free, i.e, costs 0.
@@ -101,5 +109,48 @@ Determine whether Chef should buy the discount coupon or not. Chef will buy the 
 **Time complexity**: O(N)
 
 **Space**: O(1)
+
+</details>
+
+<details>
+
+<summary>ex4_cost_of_groceries.java</summary>
+
+**Problem**: Chef visited a grocery store for fresh supplies. There are N items in the store where the ith item has a freshness value $A_i$ and cost $B_i$. Chef has decided to purchase all the items having a freshness value greater than equal to X. Find the total cost of the groceries Chef buys.
+
+**Approach 1**: Brute Force (Store Arrays)
+Steps:
+Read array A
+Read array B
+Loop through indices
+If A[i] ≥ X, add B[i]
+
+**Idea**:
+
+```
+total = 0
+
+for i from 0 to N-1
+    if A[i] ≥ X
+        total += B[i]
+```
+
+**Time complexity**: O(N)
+
+**Space**: O(N) - both arrays
+
+**Approach 2**: One Pass While Reading
+
+**Idea**: Instead of storing arrays, we can process values immediately.
+Steps:
+Read A[i] values
+Store them temporarily
+When reading B[i], apply condition and sum
+But since input gives two separate arrays, we typically store at least one.
+Time complexity remains the same.
+
+**Time complexity**: O(N)
+
+**Space**: O(N) - one array (slightly reduced)
 
 </details>
