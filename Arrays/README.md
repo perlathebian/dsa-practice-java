@@ -202,7 +202,7 @@ Else → false
 </details>
 
 <details>
-<summary>ex6_min_to_max.java - </summary>
+<summary>ex6_min_to_max.java - Return minimum number of operations to make minimum value in an array the maximum.</summary>
 
 **Problem**: Determine the minimum number of operations required to make M the miniimum value in the array A become the maximum value.
 
@@ -216,6 +216,24 @@ Each such change counts as one operation.
 Since we can set the value to any number, we can directly set it to M.
 
 **Time**: O(N) - (one pass to find minimum, one pass to count)
+
+**Space**: O(1)
+
+</details>
+
+<details>
+<summary>ex7_running_comparison.java - Compare values in 2 arrays.</summary>
+
+**Problem**: Alice and Bob recently got into running, and decided to compare how much they ran on different days. Alice is unhappy if Bob ran a distance strictly more than twice that Alice ran. Same for Bob. Both are happy if condition doesn't happen.
+
+**Approach**: Direct Condition Check
+
+**Idea**: For each day:
+Check if Alice would be unhappy.
+Check if Bob would be unhappy.
+If neither is unhappy, count the day.
+
+**Time**: O(N) - We check each day once.
 
 **Space**: O(1)
 
