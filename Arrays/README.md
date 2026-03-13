@@ -200,3 +200,23 @@ Else → false
 **Space**: O(1)
 
 </details>
+
+<details>
+<summary>ex6_min_to_max.java - </summary>
+
+**Problem**: Determine the minimum number of operations required to make M the miniimum value in the array A become the maximum value.
+
+**Approach**: First find the minimum, then count how many numbers are greater than it.
+
+**Idea**:
+For each element:
+Check if it is greater than M.
+If yes, change it to M.
+Each such change counts as one operation.
+Since we can set the value to any number, we can directly set it to M.
+
+**Time**: O(N) - (one pass to find minimum, one pass to count)
+
+**Space**: O(1)
+
+</details>
