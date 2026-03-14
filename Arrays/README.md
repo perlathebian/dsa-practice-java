@@ -238,3 +238,43 @@ If neither is unhappy, count the day.
 **Space**: O(1)
 
 </details>
+
+<details>
+<summary>ex8_single_number.java - Return single number in multiple numbers.</summary>
+
+**Problem**: Given an array of numbers, every number appears twice except one number that appears once. Return that number.
+
+**Approach 1**: Brute Force (Nested Loop)
+
+**Idea**: For each element, count how many times it appears in the array.
+If the count is 1, return it.
+
+**Time**: $O(N^2)$
+
+**Space**: O(1)
+
+**Approach 2**: HashSet / HashMap
+
+**Idea**: Track occurrences using a data structure. HashMap mapping number to its frequency.
+Then find the number with frequency = 1.
+
+**Time**: O(N)
+
+**Space**: O(N)
+
+**Approach 3**: XOR Trick (Optimal)
+
+**Idea**: Key XOR properties: a ^ a = 0 and a ^ 0 = a
+XOR is associative and commutative
+Example: 9 1 9 2 1
+Compute XOR step by step: 9 ^ 1 ^ 9 ^ 2 ^ 1
+Rearrange: (9 ^ 9) ^ (1 ^ 1) ^ 2
+Pairs cancel: 0 ^ 0 ^ 2
+Result: 2
+So the unique number remains.
+
+**Time**: O(N)
+
+**Space**: O(1)
+
+</details>
