@@ -316,3 +316,26 @@ Move left until we find a value different from it.
 **Space**: O(1)
 
 </details>
+
+<details>
+<summary>ex10_non_decreasing.java - Return if array is non-decreasing or not.</summary>
+
+**Problem**: We are given an array of integers representing difficulty ratings solved in order.
+We need to check if the array is non-decreasing:
+A[i] ≤ A[i+1] for all i
+
+- If true: print “Yes”
+- If false: print “No”
+
+**Approach**: Simple Linear Scan (Optimal)
+
+**Idea**: Loop through the array from index 0 to n-2 (included)
+
+- If arr[i] > arr[i+1], sequence is decreasing, immediately return “No”
+- If loop completes, sequence is valid, return “Yes”
+
+**Time**: O(N)
+
+**Space**: O(1)
+
+</details>
