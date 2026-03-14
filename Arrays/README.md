@@ -278,3 +278,41 @@ So the unique number remains.
 **Space**: O(1)
 
 </details>
+
+<details>
+<summary>ex9_largest_number.java - Largest and second largest.</summary>
+
+**Problem**: Return the largest possible sum of two distinct integers from the array. We need largest value and second largest value (different from largest).
+
+**Approach 1**: Brute Force (Check All Pairs)
+
+**Idea**: Check every pair (i, j).
+If the numbers are different values, compute their sum.
+Keep track of the maximum sum.
+
+**Time**: $O(N^2)$
+
+**Space**: O(1)
+
+**Approach 2**: Sorting
+
+**Idea**: Sort the array.
+The largest element will be at the end.
+Move left until we find a value different from it.
+
+**Time**: O(N log N)
+
+**Space**: O(1) - if sorting in-place
+
+**Approach 3**: Single Pass Tracking (Optimal)
+
+**Idea**: While scanning the array:
+
+- If number > largest, update both values
+- If number < largest but > secondLargest, update secondLargest
+
+**Time**: O(N)
+
+**Space**: O(1)
+
+</details>
