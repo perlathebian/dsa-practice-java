@@ -47,3 +47,54 @@ We convert the pair to an integer and use it as an index.
 **Space:** O(1)
 
 </details>
+
+<details>
+<summary>Ex2_reversing_words.java - Reverse the order of the words in the string</summary>
+
+**Problem:** The characters inside each word should remain in the same order, but the positions of the words should be reversed. The final output must follow strict formatting rules: there should be exactly one space between words, and there should be no spaces at the beginning or end of the result.
+
+**Approach 1:** Brute Force
+
+**Idea:** Split the string based on spaces, which produces an array of words.
+Steps:
+
+1. Split the string using " ".
+2. Traverse the array from end to beginning.
+3. Ignore empty strings.
+4. Append valid words to the result with a single space.
+
+**Time:** O(N)
+
+**Space:** O(N)
+
+**Approach 2:** Using Stack
+
+**Idea:** A stack naturally reverses order because it is Last In First Out (LIFO).
+Steps:
+
+1. Extract words
+2. Push them into a stack
+3. Pop them to reverse order
+4. Join with spaces
+
+**Time:** O(N)
+
+**Space:** O(N)
+
+**Approach 3:** Two Pointer Manual Parsing
+
+**Idea:** Instead of using split() (which internally allocates memory), we scan the string from right to left and extract words manually.
+Steps:
+
+1. Start from the end of the string
+2. Skip spaces
+3. Identify a word
+4. Append it to result
+5. Continue moving left
+   This avoids creating intermediate arrays.
+
+**Time:** O(N)
+
+**Space:** O(1)
+
+</details>
