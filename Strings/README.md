@@ -98,3 +98,61 @@ Steps:
 **Space:** O(1)
 
 </details>
+
+<details>
+<summary>Ex3_remove_parantheses.java - Remove outermost parantheses.</summary>
+
+**Problem:** Given a string that contains only parentheses '(' and ')'. The string is guaranteed to be valid, meaning every opening parenthesis has a matching closing parenthesis and the structure is properly balanced.
+Inside this string, there may be several primitive valid parentheses substrings. A primitive substring is a valid parentheses string that cannot be split into two smaller valid parentheses strings.
+Example: ()() → two primitives: "()" and "()"
+Each primitive has an outermost pair of parentheses that wraps the entire primitive.
+Your task is to remove the outermost parentheses from every primitive substring while keeping the internal parentheses intact.
+
+**Approach 1:** Primitive Splitting (Brute Force)
+
+**Idea:** We identify each primitive substring first.
+A primitive ends whenever the balance counter becomes zero again.
+
+**Time:** O(N) - scanning the string once
+
+**Space:** O(N) - storing substrings
+
+**Approach 2:** Depth Counter (Optimal)
+
+**Idea:**Instead of explicitly splitting primitives, we directly ignore the outermost parentheses while scanning. We maintain a depth counter.
+Rules:
+When we see '(':
+If depth > 0, keep it.
+Then increase depth.
+When we see ')':
+First decrease depth.
+If depth > 0, keep it.
+This works because the outermost parentheses correspond exactly to depth transitions:
+0 to 1
+1 to 0
+
+**Time:** O(N)
+
+**Space:** O(N)
+
+**Approach 3:** Using Stack
+
+**Idea:** A stack naturally tracks nested structures.
+The outermost parentheses of a primitive occur when the stack size is 1.
+Example:
+((()))
+Stack sizes while scanning:
+( → size 1 ← outermost
+( → size 2
+( → size 3
+) → size 2
+) → size 1
+) → size 0 ← outermost closing
+
+So we skip parentheses when the stack size is 1, because those correspond to the outer layer.
+
+**Time:** O(N)
+
+**Space:** O(N)
+
+</details>
