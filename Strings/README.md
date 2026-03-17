@@ -156,3 +156,21 @@ So we skip parentheses when the stack size is 1, because those correspond to the
 **Space:** O(N)
 
 </details>
+
+<details>
+<summary>Ex4_wordle.java - Compare two strings.</summary>
+
+**Problem:** Given two words of the same length. One is the hidden word, and the other is a guessed word.
+Compare these two words character by character at the same positions.
+For each position:
+If the characters match, output 'G'. Otherwise, output 'B'.
+
+**Approach:** Simple Character Comparison
+
+**Idea:** Loop through both strings and compare characters at each index.
+
+**Time:** O(N)
+
+**Space:** O(N) - for storing resulting string
+
+</details>
