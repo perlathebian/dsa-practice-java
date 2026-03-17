@@ -174,3 +174,19 @@ If the characters match, output 'G'. Otherwise, output 'B'.
 **Space:** O(N) - for storing resulting string
 
 </details>
+
+<details>
+<summary>Ex5_consecutive_characters.java - Find minimum operations so that not two consecutive characters are the same in a string.</summary>
+
+**Problem:** Given a binary string made up of only 0s and 1s. Insert any character (0 or 1) anywhere in the string (each insertion counts as one operation) such that in the final string, no two adjacent characters are the same.
+
+**Approach 1:** Direct Counting
+
+**Idea:** Traverse the string once.
+Every time S[i] == S[i-1], increment our operation count.
+
+**Time:** O(N)
+
+**Space:** O(1)
+
+</details>
