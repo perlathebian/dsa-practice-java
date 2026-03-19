@@ -1,4 +1,4 @@
-public class GradStudent extends Student{
+public class GradStudent extends Student implements Printable{
     private String thesisTopic;
     private String advisor;
 
@@ -15,5 +15,15 @@ public class GradStudent extends Student{
 
     public boolean isEligibleToGraduate(){
         return this.getGpa() >= 3.0 && this.thesisTopic != null;
+    }
+
+    @Override
+    public void printDetails() {
+        System.out.println(this.toString());
+    }
+
+    @Override
+    public String getSummary() {
+        return getName() + " (GPA: " + getGpa() + ", Thesis: " + thesisTopic + ")";
     }
 }

@@ -1,4 +1,4 @@
-public class Student {
+public class Student implements Printable{
     private String name;
     private int id;
     private double gpa;
@@ -41,5 +41,15 @@ public class Student {
 
     public boolean isHonors(){
         return this.gpa >= 3.5;
+    }
+
+    @Override
+    public void printDetails() {
+        System.out.println(this.toString());
+    }
+
+    @Override
+    public String getSummary() {
+        return name + " (GPA: " + gpa + ")";
     }
 }

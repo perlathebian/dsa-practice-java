@@ -45,5 +45,15 @@ public class Main {
             }
         }
 
+        // ex6
+        ArrayList<Printable> printables = new ArrayList<>();
+        printables.add(new Student("Perla", 1, 3.8, "CS"));
+        printables.add(new GradStudent("Sara", 2, 3.5, "CS", "ML thesis", "Dr. Smith"));
+        printables.add(new Student("John", 3, 2.9, "Math"));
+
+        for (Printable p : printables) {
+            p.printDetails();  // Java picks the right implementation at runtime
+        }
+
     }
 }
